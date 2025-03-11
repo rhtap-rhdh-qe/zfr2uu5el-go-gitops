@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zfr2uu5el-go-gitops
+  description: This is GitOps manifest for zfr2uu5el-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=zfr2uu5el-go
+    backstage.io/kubernetes-id: zfr2uu5el-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: zfr2uu5el-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zfr2uu5el-go
